@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-// import Campaign from "./Campaign/Campaign";
+import Campaign from "../Campaign/Campaign";
 
 const HomeAllDonations = () => {
-    const [campaigns, setCampaigns] = useState([])
+    const [campaigns, setCampaigns] = useState([]);
+
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -15,13 +16,13 @@ const HomeAllDonations = () => {
 
 
 
-        <div>
+        <div className="grid md:grid-cols-4 gap-2 max-w-7xl mx-auto py-5">
 
-            {/* {
-                campaigns.map(campaign => <Campaign key={campaign.index} campaign={campaign}></Campaign>)
+            {
+                campaigns.map(campaign => <Campaign key={campaign.id} campaign={campaign}></Campaign>)
 
 
-            }, */}
+            }
             <h1>Total Campaigns: {campaigns.length}</h1>
         </div>
     );
