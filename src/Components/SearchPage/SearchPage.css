@@ -1,0 +1,12 @@
+.for-bg {
+
+    background-image: url(https://i.ibb.co/PNLyLch/Rectangle4281.png);
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bgimgoverlay {
+    background: rgba(255, 255, 255, 0.95);
+}
