@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "category": "Healthcare",
+        "title": "Support Medical Research",
+        "description": "Help fund critical medical research projects to find cures for diseases.",
+        "image": "medical_research.jpg",
+        "color": "#3498db",
+        "bg_color": "#ecf0f1",
+        "category_color": "#e74c3c"
+    },
+    {
+        "id": 2,
+        "category": "Education",
+        "title": "Scholarship Fund",
+        "description": "Contribute to a scholarship fund to provide educational opportunities to underprivileged students.",
+        "image": "scholarship.jpg",
+        "color": "#e67e22",
+        "bg_color": "#ecf0f1",
+        "category_color": "#27ae60"
+    },
+    {
+        "id": 3,
+        "category": "Environmental",
+        "title": "Protect Our Oceans",
+        "description": "Support efforts to clean up and protect our oceans and marine life.",
+        "image": "ocean_protection.jpg",
+        "color": "#9b59b6",
+        "bg_color": "#ecf0f1",
+        "category_color": "#3498db"
+    },
+    {
+        "id": 4,
+        "category": "Animal Welfare",
+        "title": "Rescue Shelter Expansion",
+        "description": "Help expand a local animal rescue shelter and save more furry friends.",
+        "image": "animal_shelter.jpg",
+        "color": "#f1c40f",
+        "bg_color": "#ecf0f1",
+        "category_color": "#e74c3c"
+    },
+    {
+        "id": 5,
+        "category": "Human Rights",
+        "title": "Equality for All",
+        "description": "Support organizations fighting for equal rights and social justice.",
+        "image": "equality.jpg",
+        "color": "#e74c3c",
+        "bg_color": "#ecf0f1",
+        "category_color": "#3498db"
+    },
+    {
+        "id": 6,
+        "category": "Children's Welfare",
+        "title": "Children's Hospital Expansion",
+        "description": "Fund the expansion of a children's hospital to provide better care to sick kids.",
+        "image": "children_hospital.jpg",
+        "color": "#3498db",
+        "bg_color": "#ecf0f1",
+        "category_color": "#f1c40f"
+    },
+    {
+        "id": 7,
+        "category": "Community Development",
+        "title": "Community Park Revitalization",
+        "description": "Revitalize a local community park for families and residents to enjoy.",
+        "image": "community_park.jpg",
+        "color": "#27ae60",
+        "bg_color": "#ecf0f1",
+        "category_color": "#e67e22"
+    },
+    {
+        "id": 8,
+        "category": "Arts and Culture",
+        "title": "Support Local Artists",
+        "description": "Fund initiatives that promote and support local artists and their work.",
+        "image": "local_artists.jpg",
+        "color": "#e67e22",
+        "bg_color": "#ecf0f1",
+        "category_color": "#9b59b6"
+    },
+    {
+        "id": 9,
+        "category": "Disaster Relief",
+        "title": "Natural Disaster Aid",
+        "description": "Provide aid and support to communities affected by natural disasters.",
+        "image": "disaster_relief.jpg",
+        "color": "#f1c40f",
+        "bg_color": "#ecf0f1",
+        "category_color": "#e74c3c"
+    },
+    {
+        "id": 10,
+        "category": "Hunger Relief",
+        "title": "Food Bank Expansion",
+        "description": "Help expand a local food bank to feed more hungry families in need.",
+        "image": "food_bank.jpg",
+        "color": "#27ae60",
+        "bg_color": "#ecf0f1",
+        "category_color": "#3498db"
+    },
+    {
+        "id": 11,
+        "category": "Technology",
+        "title": "Tech Education for Kids",
+        "description": "Support tech education programs for children to prepare them for the future.",
+        "image": "tech_education.jpg",
+        "color": "#9b59b6",
+        "bg_color": "#ecf0f1",
+        "category_color": "#e67e22"
+    },
+    {
+        "id": 12,
+        "category": "Elderly Care",
+        "title": "Senior Center Renovation",
+        "description": "Renovate a local senior center to improve the quality of life for elderly residents.",
+        "image": "senior_center.jpg",
+        "color": "#e74c3c",
+        "bg_color": "#ecf0f1",
+        "category_color": "#f1c40f"
+    }
+]

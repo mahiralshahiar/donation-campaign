@@ -1,3 +1,5 @@
+// import Campaign from "../HomeAllDonations/Campaign/Campaign";
+import HomeAllDonations from "../HomeAllDonations/HomeAllDonations";
 import NavBar from "../NavBar/NavBar";
 import "./SearchPage.css"
 
@@ -24,6 +26,9 @@ const SearchPage = () => {
                     </section>
                 </section>
             </div>
+
+            {/* <Campaign></Campaign> */}
+            <HomeAllDonations></HomeAllDonations>
         </div >
     );
 };
