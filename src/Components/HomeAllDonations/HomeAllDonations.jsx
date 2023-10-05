@@ -16,7 +16,7 @@ const HomeAllDonations = () => {
 
 
 
-        <div className="grid md:grid-cols-4 gap-2 max-w-7xl mx-auto py-5">
+        <div className="grid md:grid-cols-4 gap-4 max-w-7xl mx-auto py-5">
 
             {
                 campaigns.map(campaign => <Campaign key={campaign.id} campaign={campaign}></Campaign>)

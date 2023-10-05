@@ -5,9 +5,9 @@
         "title": "Support Medical Research",
         "description": "Help fund critical medical research projects to find cures for diseases.",
         "image": "https://i.ibb.co/JmX0K6T/Health.png",
-        "color": "#3498db",
-        "bg_color": "#ecf0f1",
-        "category_color": "#e74c3c"
+        "color": "blue-700",
+        "bg_color": "blue-100",
+        "category_color": "blue-200"
     },
     {
         "id": 2,

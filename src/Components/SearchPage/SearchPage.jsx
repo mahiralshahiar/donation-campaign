@@ -1,6 +1,5 @@
 // import Campaign from "../HomeAllDonations/Campaign/Campaign";
 import HomeAllDonations from "../HomeAllDonations/HomeAllDonations";
-import NavBar from "../NavBar/NavBar";
 import "./SearchPage.css"
 
 const SearchPage = () => {
@@ -10,7 +9,7 @@ const SearchPage = () => {
 
             <div className="for-bg max-h-max  h-screen ">
                 <section className="bgimgoverlay h-screen">
-                    <NavBar></NavBar>
+
                     <section className=" h-fit py-16">
                         <div className="text-center mt-14 p-4">
                             <h1 className="font-bold text-5xl">I Grow By Helping People In Need</h1>
