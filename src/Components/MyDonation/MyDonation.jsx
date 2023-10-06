@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredDonations } from "../Utility/LocalStorage";
+import { Link } from "react-router-dom";
 
 const MyDonation = () => {
     const donations = useLoaderData();
 
     const [myDonations, setMyDonations] = useState([])
 
+    const [dataLength, setDataLength] = useState(4);
     useEffect(() => {
         const StoredDonationIds = getStoredDonations();
 
@@ -27,7 +29,7 @@ const MyDonation = () => {
 
     }, [])
 
-
+    // console.log(dataLength);
 
 
 
@@ -35,11 +37,11 @@ const MyDonation = () => {
         <div>
 
 
-            <div className="grid md:grid-cols-2 gap-6 max-w-7xl mx-auto py-8 mt-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 px-3 lg:px-0 md:max-w-7xl mx-auto py-8 mt-5 scale-90 md:scale-100">
 
 
 
-                {myDonations.map((donation) => (
+                {myDonations.slice(0, dataLength).map((donation) => (
                     <div key={donation.id}>
 
 
@@ -54,17 +56,19 @@ const MyDonation = () => {
                         </div> */}
 
 
-                        <div className="rounded bg-base-100 shadow-xl flex-row flex ">
-                            <img className="w-72 rounded h-44" src={donation.image} alt="img" />
-                            <div className=" p-2 px-6">
+                        <div style={{ backgroundColor: (donation.color + "20") }} className="rounded bg-base-100 shadow-xl flex-row flex ">
+                            <img className="md:w-72 w-60 rounded md:h-44" src={donation.image} alt="img" />
+                            <div className=" md:p-2 md:px-6 p-2">
 
-                                <div className={`badge rounded p-3 font-medium my-2 ${donation.category_color} ${donation.color} `}>{donation.category}</div>
+                                <div style={{ color: donation.color, backgroundColor: (donation.color + "30") }} className={`badge rounded p-3 font-medium my-2 `}>{donation.category}</div>
 
 
                                 <h2 className="font-semibold">{donation.title}</h2>
-                                <p className="py-2">$290.00</p>
+                                <p style={{ color: donation.color }} className="py-2 font-semibold">$290.00</p>
                                 <div className="flex">
-                                    <button className="btn">View Details</button>
+                                    <Link to={`/campaign/${donation.id}`}>
+                                        <button style={{ backgroundColor: donation.color }} className="btn text-white">View Details</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -74,13 +78,13 @@ const MyDonation = () => {
 
                     </div>
                 ))}
-                <h1>My Donations: {myDonations.length}</h1>
+
             </div>
 
+            <div className={`flex justify-center py-3 mb-6 ${dataLength === myDonations.length && 'hidden'}`}>
+                <button onClick={() => setDataLength(myDonations.length)} className="btn bg-[#009444] text-white">See All</button>
 
-
-
-
+            </div>
 
         </div >
     );

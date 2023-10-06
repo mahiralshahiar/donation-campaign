@@ -13,14 +13,23 @@ const CampaignDetails = () => {
     const idInt = parseInt(id);
     const Campaign = Campaigns.find(Campaigns => Campaigns.id === idInt);
 
+
+
     const handleDonate = () => {
-        saveDonations(idInt)
-        toast('Your Have Donated Successfully')
+        const alreadyDonated = localStorage.getItem(`donation_${idInt}`);
+        if (alreadyDonated) {
+            toast.error('You have already donated');
+        } else {
+            saveDonations(idInt);
+            localStorage.setItem(`donation_${idInt}`, 'true');
+            toast('Your donation was successful.');
+        }
     }
 
 
+
     return (
-        <div className='max-w-7xl mx-auto py-5'>
+        <div className='lg:max-w-7xl md:max-w-2xl md:px-0 px-2 mx-auto py-5 my-4'>
             <div className='max-w-7xl mx-auto py-5 rounded-lg bg-transparent relative'>
                 <div className="hero min-h-screen rounded-lg bg-transparent bg-no-repeat relative"
                     style={{ backgroundImage: `url(${Campaign.image})` }}>
@@ -29,7 +38,7 @@ const CampaignDetails = () => {
 
                 </div>
                 <div className="w-full h-32 bg-[#07070797]  absolute bottom-5 rounded-lg">
-                    <button onClick={() => handleDonate()} className={`max-w-md absolute bottom-10 left-10  font-semibold rounded text-white btn border-none b${Campaign.color}`}>Donate $290</button>
+                    <button onClick={() => handleDonate()} style={{ backgroundColor: (Campaign.color) }} className={`max-w-md absolute bottom-10 left-10  font-semibold rounded text-white btn border-none `}>Donate $290</button>
                 </div>
             </div>
 

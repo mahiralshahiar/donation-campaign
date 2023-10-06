@@ -2,7 +2,7 @@ import SearchPage from "../SearchPage/SearchPage.jsx"
 const Home = () => {
     return (
         <div>
-            <SearchPage></SearchPage>
+            <SearchPage ></SearchPage>
         </div>
     );
 };

@@ -1,8 +1,28 @@
 // import Campaign from "../HomeAllDonations/Campaign/Campaign";
 import HomeAllDonations from "../HomeAllDonations/HomeAllDonations";
 import "./SearchPage.css"
+import React, { useState } from 'react';
 
-const SearchPage = () => {
+
+const SearchPage = ({ onSearch, }) => {
+
+    const [searchTerm, setSearchTerm] = useState('');
+    const [searchButtonClicked, setSearchButtonClicked] = useState(false);
+
+    const handleSearch = () => {
+
+
+
+        if (searchButtonClicked) {
+            setSearchButtonClicked(false);
+        }
+
+        else if (searchButtonClicked !== true) {
+            setSearchButtonClicked(true);
+        }
+    };
+
+
     return (
         <div>
 
@@ -18,8 +38,11 @@ const SearchPage = () => {
 
                         <div className="form-control py-8 pb-40 max-h-screen ">
                             <div className="input-group justify-center">
-                                <input type="text" placeholder="Search here...." className="input input-bordered " />
-                                <button className="btn bg-[#FF444A] text-white hover:bg-red-700">Search</button>
+
+                                <input onChange={(e) => setSearchTerm(e.target.value)} type="text" placeholder="Search here...." className="input input-bordered " />
+
+
+                                <button onClick={handleSearch} className="btn bg-[#FF444A] text-white hover:bg-red-700">Search</button>
                             </div>
                         </div>
                     </section>
@@ -27,7 +50,7 @@ const SearchPage = () => {
             </div>
 
             {/* <Campaign></Campaign> */}
-            <HomeAllDonations></HomeAllDonations>
+            <HomeAllDonations searchTerm={searchTerm} searchButtonClicked={searchButtonClicked}></HomeAllDonations>
         </div >
     );
 };
