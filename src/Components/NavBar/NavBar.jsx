@@ -26,7 +26,7 @@ const NavBar = () => {
                         {Links}
                     </ul>
                 </div>
-                <figure><img src="https://i.ibb.co/875Zv5Y/Logo.png" alt="" /></figure>
+                <figure><NavLink to="/"><img src="https://i.ibb.co/875Zv5Y/Logo.png" alt="" /></NavLink></figure>
 
             </div>
 

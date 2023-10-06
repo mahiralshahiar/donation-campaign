@@ -9,10 +9,10 @@ import {
 } from "react-router-dom";
 import Root from './Components/Root/Root.jsx';
 import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
-import DonationPage from './Components/DonationPage/DonationPage.jsx';
 import StatisticsPage from './Components/StatisticsPage/StatisticsPage.jsx';
 import CampaignDetails from './Components/CampaignDetails/CampaignDetails';
 import Home from './Components/Home/Home';
+import MyDonation from './Components/MyDonation/MyDonation.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,11 +26,14 @@ const router = createBrowserRouter([
 
     {
       path: "/donation",
-      element: <DonationPage></DonationPage>,
+      element: <MyDonation></MyDonation>,
+      loader: () => fetch('/data.json')
     },
+
     {
       path: "/statistics",
       element: <StatisticsPage></StatisticsPage>,
+      loader: () => fetch('/data.json')
     },
     {
 
